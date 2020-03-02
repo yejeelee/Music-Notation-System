@@ -35,12 +35,6 @@ public class Layer extends ArrayList<I.Show> implements I.Show {
 
   }
 
-  public void betterRemove(I.Show show){
-    for(int i = 0; i < size(); i++){
-      if(get(i) == show){ remove(i); break; }
-    }
-  }
-
 
 
 }

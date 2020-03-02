@@ -9,8 +9,6 @@ public class Glyph{
   // Offsets & Scales for Sinfonia True Type Font
   public static String fontName = UC.FontName;
 
-  // coordinate mapping to the top line of staff
-  // symbols are stored in font
   public static Glyph BRACE = new Glyph((char)61473, 16, 0, 4);
 
   public static Glyph CLEF_G = new Glyph((char)61479, 16, -3, 1);
@@ -22,7 +20,6 @@ public class Glyph{
   public static Glyph HEAD_HALF = new Glyph((char)61485, 16, 0, 7);
   public static Glyph HEAD_Q = new Glyph((char)61486, 16, 0, 7);
   public static Glyph HEAD_W = new Glyph((char)61484, 16, 0, 7);
-
   public static Glyph HEAD_BREVE = new Glyph((char)61483, 16, 0, 7);
 
   public static Glyph FLAG1D = new Glyph((char)61487, 16, 0, 8);

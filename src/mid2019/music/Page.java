@@ -13,39 +13,33 @@ public class Page extends Mass {
   public int nSys, sysGap;
   public ArrayList<Sys> sysList = new ArrayList<>();
   public static Page PAGE;
-  public Page(Sys.Fmt sysFmt) { super("BACK"); this.sysFmt = sysFmt;
 
-    // add new Staff
+  public Page(Sys.Fmt sysFmt) {
+    super("BACK");
+    this.sysFmt = sysFmt;
     addReaction(new Reaction("E-W") {
-
       public int bid(Gesture g) {
         int y = g.vs.yM();
-        if( y < PAGE.margins.top + sysFmt.height() + 30) { return UC.noBid; }
+        if (y < PAGE.margins.top + sysFmt.height() + 30) { return UC.noBid; }
         return 15;
       }
 
       public void act(Gesture g) {
         int y = g.vs.yM();
         PAGE.addNewStaff(y - PAGE.margins.top);
-
       }
     });
 
-    // add new System
     addReaction(new Reaction("E-E") {
-
       public int bid(Gesture g) {
-        int y = g.vs.yM();
-        int yBottom = PAGE.sysTop(nSys);
-        if(y < yBottom) { return UC.noBid; }
+        int y = g.vs.yM(), yBottom = PAGE.sysTop(nSys);
+        if (y < yBottom) { return UC.noBid; }
         return 15;
       }
 
       public void act(Gesture g) {
         int y = g.vs.yM();
-        if(PAGE.nSys == 1) {
-          PAGE.sysGap = y - PAGE.sysTop(1);
-        }
+        if (PAGE.nSys == 1) { PAGE.sysGap = y - PAGE.sysTop(1); }
         PAGE.addNewSys();
       }
     });
@@ -56,10 +50,11 @@ public class Page extends Mass {
   }
 
   public void show(Graphics g) {
-    for(int i =0; i < nSys; i++) {
+    for (int i = 0; i < nSys; i++) {
       sysFmt.showAt(g, sysTop(i));
     }
   }
+
   public void addNewSys() {
     sysList.add(new Sys(nSys++, sysFmt));
   }
@@ -69,14 +64,12 @@ public class Page extends Mass {
     int n = sysFmt.size();
     sysFmt.add(sf);
     sysFmt.staffOffsets.add(yOff);
-    for(int i = 0; i < nSys; i++) {
+    for (int i = 0; i < nSys; i++) {
       sysList.get(i).addStaff(new Staff(n, sf));
     }
-
   }
   //--------------------PAGE.MARGINS-----------------------
   public static class Margins {
     public int top = 50, left = 50, right=UC.mainWindowWidth-50, bottom = UC.mainWindowHeight-50;
   }
-
 }

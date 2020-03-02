@@ -17,11 +17,11 @@ public abstract class Mass extends Reaction.List implements I.Show {
 
   public void deleteMass() {
     clearAll();
-//    System.out.println("Remove from layer: " + this);
-//    System.out.println("Layer now" + layer);
-//    layer.remove(this);
-    layer.betterRemove(this);
-//    System.out.println("Layer after" + layer);
+    // System.out.println("Removing from layer. " + this);
+    // System.out.println("Layer now " + layer);
+    layer.remove(this);
+    //layer.betterRemove(this);
+    // System.out.println("Layer after " + layer);
   }
 
   //do nothing here.
