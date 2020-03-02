@@ -1,8 +1,6 @@
 # Music-Notation-System
 
-In progress...
-
-Currently working on Music-Notation-System which is a Gesture based interface that can do pattern recognition and shape recognition.
+This is Music-Notation-System which is a Gesture based interface that can do pattern recognition and shape recognition.
 Users are allow to draw on pannel.
 
 In order to see current process, please download and run application!
