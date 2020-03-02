@@ -10,3 +10,4 @@ In order to see current process, please download and run application!
 * To draw bar line, draw a stroke vertically from top to bottom.
 * To draw a note head, draw a (/) <- this line from top to bottom.
 
+![Music Notation](/music_note.JPG)
