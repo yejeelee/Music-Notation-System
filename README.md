@@ -9,5 +9,9 @@ In order to see current process, please download and run application!
 * To daw a system, daw a stroke horizontally from left to right.
 * To draw bar line, draw a stroke vertically from top to bottom.
 * To draw a note head, draw a (/) <- this line from top to bottom.
+![example1](example1.mov)
+<video width="320" height="240" controls>
+  <source src="example1.mov" type="video/mp4">
+</video>
 
 ![Music Notation](/music_note.JPG)
